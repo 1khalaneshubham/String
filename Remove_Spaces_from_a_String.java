@@ -15,14 +15,25 @@ Explanation: After removing all the whitespaces Howareyoudoing is the result
 import java.util.*;
 public class Remove_Spaces_from_a_String{
     public static int RemoveSpaces(char[] str){
-        int count = 0;
-        for(int i = 0; i<str.length; i++){
-            if(str[i] != ' '){
-                str[count] = str[i];
-                count++;
-            }
-        }
-        return count;
+        // int count = 0;
+        // for(int i = 0; i<str.length; i++){
+        //     if(str[i] != ' '){
+        //         str[count] = str[i];
+        //         count++;
+        //     }
+        // }
+        // return count;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input String: ");
+
+        String str = sc.nextLine();
+
+        // Remove spaces from the input
+        String result = str.replace(" ", "");
+
+        // Output the result
+        System.out.println("String without spaces: " + result);
     }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
